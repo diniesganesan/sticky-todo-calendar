@@ -1,7 +1,9 @@
 # About
+
 Sticky todo calendar app developed using React + Chakra UI
 
 # Demo
+
 https://github.com/diniesganesan/sticky-todo-calendar/assets/35025414/9df2b2e7-83a1-49f7-9e7e-2889714c09ed
 
 ### `npm start`
