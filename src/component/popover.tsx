@@ -6,6 +6,7 @@ import {
   PopoverCloseButton,
   PopoverHeader,
   PopoverBody,
+  Link,
 } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
 import { INotes } from '../util';
@@ -30,7 +31,15 @@ export const PopoverComponent = ({
         <PopoverArrow />
         <PopoverCloseButton onClick={() => onClose()} />
         <PopoverHeader>Notes</PopoverHeader>
-        <PopoverBody>{n.description}</PopoverBody>
+        <PopoverBody>
+          {n.description.includes('https') ? (
+            <Link href={n.description} isExternal>
+              {n.description}
+            </Link>
+          ) : (
+            n.description
+          )}
+        </PopoverBody>
       </PopoverContent>
     </Popover>
   );

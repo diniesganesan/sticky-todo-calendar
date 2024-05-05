@@ -31,8 +31,8 @@ function SubNotes({ n }: { n: INotes }) {
             }}
           ></span>
           <Text pl={1} pr={1} w="100%" fontSize={14}>
-            {n.description.length > 15
-              ? n.description.substring(0, 10).padEnd(13, '.')
+            {n.description.length > 8
+              ? n.description.substring(0, 8).padEnd(11, '.')
               : n.description}
           </Text>
         </HStack>
